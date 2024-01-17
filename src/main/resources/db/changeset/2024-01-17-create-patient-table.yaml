@@ -1,0 +1,34 @@
+databaseChangeLog:
+  - changeSet:
+      id: createPatientTable
+      author: Margarita Martinkevich
+      changes:
+        - createTable:
+            tableName: patients
+            columns:
+              - column:
+                  name: id
+                  type: integer
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(30)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: temperature
+                  type: numeric(3,1)
+              - column:
+                  name: pulse
+                  type: numeric(3)
+              - column:
+                  name: date_of_birth
+                  type: date
+              - column:
+                  name: status
+                  type: varchar(10)
+                  constraints:
+                    nullable: false

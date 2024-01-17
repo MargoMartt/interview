@@ -1,0 +1,3 @@
+databaseChangeLog:
+  - include:
+      file: db/changeset/2024-01-17-create-patient-table.yaml
